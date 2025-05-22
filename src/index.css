@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@theme {
+  --primary: #7400ff;
+  --secondary: #dd00ff;
+  --font-poppins: Poppins, sans-serif;
+  --bot-back: #5da3da;
+  --nft-color: #50b72f;
+  --market-color: #802ebd;
+  --footer-light: #e6e6e6;
+  --footer-dark: #1a1a1a;
+  --chat-back-dark: #1a1a1a;
+  --chat-back-light: #ffffff;
+  --main-muted-light: #4b5563;
+  --main-muted-dark: #e5e7eb;
+}
+
+body,
+html {
+  font-family: Poppins !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-slick .slick-dots {
+  bottom: -35px;
+}
+
+.main-slick .slick-dots li {
+  width: fit-content;
+  border-radius: 50%;
+}
+
+.shadow-main {
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px; */
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+@keyframes custom-ping {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.custom-ping {
+  animation: custom-ping 2s ease-in-out infinite;
+}
